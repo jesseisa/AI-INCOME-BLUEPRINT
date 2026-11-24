@@ -2,316 +2,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI Income Blueprint by Jesse Isa — a practical guide to using AI tools to create digital products, offer services and explore online business opportunities.">
-<meta name="theme-color" content="#080d1b">
-<title>AI Income Blueprint by Jesse Isa</title>
-<style>
-:root{--bg:#080d1b;--panel:#101a31;--ink:#f7f9ff;--muted:#b7c3d9;--cyan:#35d2d0;--gold:#f0c56a;--line:rgba(190,209,245,.16);--max:1120px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(circle at 80% 0%,rgba(49,104,214,.22),transparent 32rem),radial-gradient(circle at 0% 25%,rgba(31,179,190,.10),transparent 28rem),var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
-a{color:inherit}
-.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-.topbar{padding:20px 0;border-bottom:1px solid var(--line)}
-.nav{display:flex;justify-content:space-between;align-items:center;gap:20px}
-.brand{font-weight:850;letter-spacing:.08em;font-size:.88rem}
-.brand span{color:var(--cyan)}
-.nav a{text-decoration:none;color:var(--muted);font-size:.9rem}
-.navlinks{display:flex;gap:24px;align-items:center}
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:800;color:#08101e;background:linear-gradient(110deg,var(--gold),#ffe2a0);box-shadow:0 12px 32px rgba(240,197,106,.18);transition:transform .2s,filter .2s}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
-.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
-.hero{padding:84px 0 72px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-.eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--cyan);font-size:.78rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
-.dot{width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 15px var(--cyan)}
-h1{font-size:clamp(2.8rem,6vw,5.4rem);line-height:.99;letter-spacing:-.055em;margin:20px 0 22px;max-width:760px}
-h1 em{color:var(--gold);font-style:normal}
-.lead{font-size:1.17rem;color:var(--muted);max-width:660px;margin:0 0 28px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:13px}
-.micro{margin-top:17px;color:#91a2bf;font-size:.82rem}
-.book-stage{display:flex;justify-content:center;perspective:1000px}
-.book{position:relative;width:min(330px,80vw);aspect-ratio:.72;padding:30px 25px;overflow:hidden;border-radius:8px 18px 18px 8px;background:radial-gradient(circle at 80% 15%,rgba(53,210,208,.32),transparent 32%),linear-gradient(145deg,#1d3768 0%,#0c1730 55%,#080d1b 100%);border:1px solid rgba(240,197,106,.65);box-shadow:22px 24px 0 #07101f,28px 34px 60px rgba(0,0,0,.55),inset 5px 0 12px rgba(255,255,255,.08);transform:rotateY(-10deg) rotateX(3deg)}
-.book:before{content:"";position:absolute;inset:0 auto 0 10px;width:2px;background:rgba(255,255,255,.17)}
-.book:after{content:"";position:absolute;width:220px;height:220px;border:1px solid rgba(53,210,208,.28);border-radius:50%;right:-90px;bottom:-70px;box-shadow:0 0 0 18px rgba(53,210,208,.035),0 0 0 38px rgba(53,210,208,.025)}
-.book-kicker{color:var(--cyan);font-size:.65rem;letter-spacing:.2em;font-weight:900}
-.book-title{margin:42px 0 14px;font-size:2.15rem;line-height:.98;font-weight:950;letter-spacing:-.06em}
-.book-title span{color:var(--gold)}
-.book-sub{color:#d5e1f7;font-size:.78rem;line-height:1.5;max-width:215px}
-.book-rule{height:2px;width:48px;background:var(--gold);margin:24px 0}
-.book-foot{position:absolute;bottom:25px;left:25px;color:#b7c3d9;font-size:.62rem;letter-spacing:.16em}
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.025)}
-.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.strip-item{padding:20px 14px;text-align:center;color:var(--muted);font-size:.9rem;border-right:1px solid var(--line)}
-.strip-item:last-child{border:0}
-.strip-item strong{display:block;color:var(--ink);font-size:1.05rem}
-section{padding:78px 0}
-.section-head{max-width:720px;margin:0 auto 38px;text-align:center}
-.section-head h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.08;letter-spacing:-.04em;margin:12px 0}
-.section-head p{color:var(--muted);margin:0}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:linear-gradient(160deg,rgba(22,37,67,.95),rgba(13,22,42,.95));border:1px solid var(--line);border-radius:17px;padding:24px}
-.card .num{color:var(--cyan);font-size:.76rem;letter-spacing:.12em;font-weight:900}
-.card h3{margin:10px 0 8px;font-size:1.12rem}
-.card p{color:var(--muted);margin:0;font-size:.94rem}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.panel{background:linear-gradient(145deg,#142341,#0e172b);border:1px solid var(--line);border-radius:22px;padding:30px}
-.panel h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.1;margin:10px 0 15px;letter-spacing:-.04em}
-.panel p{color:var(--muted)}
-.checklist{list-style:none;padding:0;margin:22px 0 0}
-.checklist li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);color:#e3eafa}
-.checklist li:last-child{border:0}
-.check{color:var(--cyan);font-weight:900}
-.chapter-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.chapter{display:flex;gap:14px;padding:15px 17px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:12px}
-.chapter b{color:var(--gold);font-size:.8rem;min-width:25px}
-.chapter span{color:#e2eafa;font-size:.93rem}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.step{padding:21px;border-radius:15px;background:var(--panel);border:1px solid var(--line)}
-.step strong{display:block;color:var(--gold);font-size:1.35rem;margin-bottom:8px}
-.step p{color:var(--muted);margin:0;font-size:.9rem}
-.audience{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.audience .card{padding:26px}
-.audience h3{margin-top:0}
-.muted{color:var(--muted)}
-.cta-band{padding:60px 30px;text-align:center;border-radius:24px;border:1px solid rgba(240,197,106,.35);background:radial-gradient(circle at 50% 0%,rgba(77,141,255,.23),transparent 55%),linear-gradient(145deg,#142545,#0d162a)}
-.cta-band h2{font-size:clamp(2.1rem,4vw,3.4rem);line-height:1.05;letter-spacing:-.045em;margin:12px auto;max-width:760px}
-.cta-band p{color:var(--muted);max-width:620px;margin:0 auto 25px}
-.fineprint{color:#8798b5;font-size:.78rem;max-width:760px;margin:20px auto 0}
-.faq{max-width:800px;margin:auto}
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;font-weight:750}
-details p{color:var(--muted);margin:12px 0 0}
-.mobile-cta{display:none}
-footer{border-top:1px solid var(--line);padding:28px 0 40px;color:#8fa0bd;font-size:.82rem}
-.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:850px){
-.hero-grid,.split{grid-template-columns:1fr}
-.hero{padding:60px 0}
-.book-stage{margin-top:10px}
-.cards{grid-template-columns:1fr 1fr}
-.steps{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-.mobile-cta{display:block;position:fixed;z-index:20;left:12px;right:12px;bottom:12px;padding:8px;border:1px solid var(--line);border-radius:15px;background:rgba(8,13,27,.94);backdrop-filter:blur(12px);box-shadow:0 10px 35px rgba(0,0,0,.4)}
-.mobile-cta .btn{width:100%;padding:12px 16px}
-body{padding-bottom:76px}
-.wrap{width:min(100% - 30px,var(--max))}
-.navlinks{display:none}
-.hero{padding:48px 0}
-.lead{font-size:1.03rem}
-.strip-grid{grid-template-columns:1fr 1fr}
-.strip-item:nth-child(2){border-right:0}
-.strip-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
-section{padding:58px 0}
-.cards,.chapter-list,.audience{grid-template-columns:1fr}
-.steps{grid-template-columns:1fr 1fr}
-.panel{padding:23px}
-.btn{width:100%}
-.hero-actions{display:grid}
-.book{width:260px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Income Blueprint by Jesse Isa is a practical guide to using AI tools to create digital products, offer services, build an audience and launch an online business.">
+  <meta name="theme-color" content="#0b1020">
+  <title>AI Income Blueprint by Jesse Isa | Learn. Create. Launch. Improve.</title>
+
+  <!-- Meta Pixel: AI Income Blueprint -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3546624978841623');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3546624978841623&ev=PageView&noscript=1"
+    alt="" />
+  </noscript>
+  <!-- End Meta Pixel -->
+
+  <style>
+    :root {
+      --bg: #080d1b;
+      --panel: #101a31;
+      --panel2: #14213d;
+      --ink: #f7f9ff;
+      --muted: #b7c3d9;
+      --blue: #4d8dff;
+      --cyan: #35d2d0;
+      --gold: #f0c56a;
+      --line: rgba(190, 209, 245, .16);
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 80% 0%, rgba(49, 104, 214, .22), transparent 32rem),
+        radial-gradient(circle at 0% 25%, rgba(31, 179, 190, .10), transparent 28rem),
+        var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin: auto; }
+    .topbar { padding: 20px 0; border-bottom: 1px solid var(--line); }
+    .nav { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .brand { font-weight: 850; letter-spacing: .08em; font-size: .88rem; }
+    .brand span { color: var(--cyan); }
+    .nav a { text-decoration:none; color:var(--muted); font-size:.9rem; }
+    .navlinks { display:flex; gap:24px; align-items:center; }
+
+    .btn {
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:9px;
+      padding:14px 22px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:800;
+      color:#08101e;
+      background:linear-gradient(110deg,var(--gold),#ffe2a0);
+      box-shadow:0 12px 32px rgba(240,197,106,.18);
+      transition:transform .2s, filter .2s;
+    }
+
+    .btn:hover { transform:translateY(-2px); filter:brightness(1.05); }
+    .btn.secondary { background:transparent; color:var(--ink); border:1px solid var(--line); box-shadow:none; }
+
+    .hero { padding:84px 0 72px; }
+    .hero-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:55px; align-items:center; }
+    .eyebrow { display:inline-flex; gap:9px; align-items:center; color:var(--cyan); font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    .dot { width:7px; height:7px; background:var(--cyan); border-radius:50%; box-shadow:0 0 15px var(--cyan); }
+
+    h1 { font-size:clamp(2.8rem,6vw,5.4rem); line-height:.99; letter-spacing:-.055em; margin:20px 0 22px; max-width:760px; }
+    h1 em { color:var(--gold); font-style:normal; }
+    .lead { font-size:1.17rem; color:var(--muted); max-width:660px; margin:0 0 28px; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:13px; }
+    .micro { margin-top:17px; color:#91a2bf; font-size:.82rem; }
+
+    .book-stage { display:flex; justify-content:center; perspective:1000px; }
+
+    .book {
+      position:relative;
+      width:min(330px,80vw);
+      aspect-ratio: .72;
+      padding:30px 25px;
+      overflow:hidden;
+      border-radius:8px 18px 18px 8px;
+      background:
+        radial-gradient(circle at 80% 15%, rgba(53,210,208,.32), transparent 32%),
+        linear-gradient(145deg,#1d3768 0%,#0c1730 55%,#080d1b 100%);
+      border:1px solid rgba(240,197,106,.65);
+      box-shadow:22px 24px 0 #07101f, 28px 34px 60px rgba(0,0,0,.55), inset 5px 0 12px rgba(255,255,255,.08);
+      transform:rotateY(-10deg) rotateX(3deg);
+    }
+
+    .book:before { content:""; position:absolute; inset:0 auto 0 10px; width:2px; background:rgba(255,255,255,.17); }
+    .book:after { content:""; position:absolute; width:220px;height:220px;border:1px solid rgba(53,210,208,.28);border-radius:50%;right:-90px;bottom:-70px;box-shadow:0 0 0 18px rgba(53,210,208,.035),0 0 0 38px rgba(53,210,208,.025); }
+    .book-kicker { color:var(--cyan); font-size:.65rem; letter-spacing:.2em; font-weight:900; }
+    .book-title { margin:42px 0 14px; font-size:2.15rem; line-height:.98; font-weight:950; letter-spacing:-.06em; }
+    .book-title span { color:var(--gold); }
+    .book-sub { color:#d5e1f7; font-size:.78rem; line-height:1.5; max-width:215px; }
+    .book-rule { height:2px; width:48px; background:var(--gold); margin:24px 0; }
+    .book-foot { position:absolute; bottom:25px; left:25px; color:#b7c3d9; font-size:.62rem; letter-spacing:.16em; }
+
+    .strip { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:rgba(255,255,255,.025); }
+    .strip-grid { display:grid; grid-template-columns:repeat(4,1fr); }
+    .strip-item { padding:20px 14px; text-align:center; color:var(--muted); font-size:.9rem; border-right:1px solid var(--line); }
+    .strip-item:last-child { border:0; }
+    .strip-item strong { display:block; color:var(--ink); font-size:1.05rem; }
+
+    section { padding:78px 0; }
+    .section-head { max-width:720px; margin:0 auto 38px; text-align:center; }
+    .section-head h2 { font-size:clamp(2rem,4vw,3.2rem); line-height:1.08; letter-spacing:-.04em; margin:12px 0; }
+    .section-head p { color:var(--muted); margin:0; }
+
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+    .card { background:linear-gradient(160deg,rgba(22,37,67,.95),rgba(13,22,42,.95)); border:1px solid var(--line); border-radius:17px; padding:24px; }
+    .card .num { color:var(--cyan); font-size:.76rem; letter-spacing:.12em; font-weight:900; }
+    .card h3 { margin:10px 0 8px; font-size:1.12rem; }
+    .card p { color:var(--muted); margin:0; font-size:.94rem; }
+
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+    .panel { background:linear-gradient(145deg,#142341,#0e172b); border:1px solid var(--line); border-radius:22px; padding:30px; }
+    .panel h2 { font-size:clamp(1.8rem,3vw,2.6rem); line-height:1.1; margin:10px 0 15px; letter-spacing:-.04em; }
+    .panel p { color:var(--muted); }
+
+    .checklist { list-style:none; padding:0; margin:22px 0 0; }
+    .checklist li { display:flex; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); color:#e3eafa; }
+    .checklist li:last-child { border:0; }
+    .check { color:var(--cyan); font-weight:900; }
+
+    .chapter-list { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .chapter { display:flex; gap:14px; padding:15px 17px; border:1px solid var(--line); background:rgba(255,255,255,.025); border-radius:12px; }
+    .chapter b { color:var(--gold); font-size:.8rem; min-width:25px; }
+    .chapter span { color:#e2eafa; font-size:.93rem; }
+
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+    .step { padding:21px; border-radius:15px; background:var(--panel); border:1px solid var(--line); }
+    .step strong { display:block; color:var(--gold); font-size:1.35rem; margin-bottom:8px; }
+    .step p { color:var(--muted); margin:0; font-size:.9rem; }
+
+    .audience { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .audience .card { padding:26px; }
+    .audience h3 { margin-top:0; }
+    .muted { color:var(--muted); }
+
+    .cta-band { padding:60px 30px; text-align:center; border-radius:24px; border:1px solid rgba(240,197,106,.35); background:radial-gradient(circle at 50% 0%,rgba(77,141,255,.23),transparent 55%),linear-gradient(145deg,#142545,#0d162a); }
+    .cta-band h2 { font-size:clamp(2.1rem,4vw,3.4rem); line-height:1.05; letter-spacing:-.045em; margin:12px auto; max-width:760px; }
+    .cta-band p { color:var(--muted); max-width:620px; margin:0 auto 25px; }
+    .fineprint { color:#8798b5; font-size:.78rem; max-width:760px; margin:20px auto 0; }
+
+    .faq { max-width:800px; margin:auto; }
+    details { border-bottom:1px solid var(--line); padding:18px 0; }
+    summary { cursor:pointer; font-weight:750; }
+    details p { color:var(--muted); margin:12px 0 0; }
+    .mobile-cta { display:none; }
+
+    @media(max-width:600px) {
+      .mobile-cta { display:block; position:fixed; z-index:20; left:12px; right:12px; bottom:12px; padding:8px; border:1px solid var(--line); border-radius:15px; background:rgba(8,13,27,.94); backdrop-filter:blur(12px); box-shadow:0 10px 35px rgba(0,0,0,.4); }
+      .mobile-cta .btn { width:100%; padding:12px 16px; }
+      body { padding-bottom:76px; }
+    }
+
+    footer { border-top:1px solid var(--line); padding:28px 0 40px; color:#8fa0bd; font-size:.82rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+
+    @media(max-width:850px) {
+      .hero-grid,.split { grid-template-columns:1fr; }
+      .hero { padding:60px 0; }
+      .book-stage { margin-top:10px; }
+      .cards { grid-template-columns:1fr 1fr; }
+      .steps { grid-template-columns:1fr 1fr; }
+    }
+
+    @media(max-width:600px) {
+      .wrap { width:min(100% - 30px,var(--max)); }
+      .navlinks { display:none; }
+      .hero { padding:48px 0; }
+      .lead { font-size:1.03rem; }
+      .strip-grid { grid-template-columns:1fr 1fr; }
+      .strip-item:nth-child(2) { border-right:0; }
+      .strip-item:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+      section { padding:58px 0; }
+      .cards,.chapter-list,.audience { grid-template-columns:1fr; }
+      .steps { grid-template-columns:1fr 1fr; }
+      .panel { padding:23px; }
+      .btn { width:100%; }
+      .hero-actions { display:grid; }
+      .book { width:260px; }
+    }
+  </style>
 </head>
+
 <body>
-<header class="topbar">
-<div class="wrap nav">
-<div class="brand">AI <span>INCOME</span> BLUEPRINT <small style="display:block;color:#91a2bf;font-size:.68rem;letter-spacing:.08em;font-weight:600;margin-top:2px;">BY JESSE ISA</small></div>
-<nav class="navlinks" aria-label="Main navigation">
-<a href="#inside">What's inside</a>
-<a href="#how-it-works">How it works</a>
-<a href="#faq">FAQs</a>
-</nav>
-<p class="price-line"><strong>₦10,000</strong> <span>One-time payment</span></p>
-<a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦10,000</a>
-</div>
-</header>
+  <header class="topbar">
+    <div class="wrap nav">
+      <div class="brand">
+        AI <span>INCOME</span> BLUEPRINT
+        <small style="display:block;color:#91a2bf;font-size:.68rem;letter-spacing:.08em;font-weight:600;margin-top:2px;">BY JESSE ISA</small>
+      </div>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#inside">What's inside</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+      <p class="price-line"><strong>₦10,000</strong> <span>One-time payment</span></p>
+      <a class="btn" href="#get-access">Buy Now – ₦10,000</a>
+    </div>
+  </header>
 
-<main>
-<section class="hero">
-<div class="wrap hero-grid">
-<div>
-<div class="eyebrow"><span class="dot"></span> A practical guide for beginners</div>
-<h1>Turn AI skills into <em>real opportunities.</em></h1>
-<p class="lead">Discover practical ways to use artificial intelligence to create digital products, offer services, build an audience and launch an online business — with a clear plan to help you take your first steps.</p>
-<div class="hero-actions">
-<a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦10,000</a>
-<a class="btn secondary" href="#inside">Explore what's inside</a>
-</div>
-<p class="micro">Beginner-friendly • Practical examples • Prompts, worksheets and a 30-day action plan</p>
-</div>
-<div class="book-stage" aria-label="AI Income Blueprint digital book cover illustration">
-<div class="book">
-<div class="book-kicker">THE PRACTICAL EDITION · 2026</div>
-<div class="book-title">AI<br><span>INCOME</span><br>BLUEPRINT</div>
-<div class="book-rule"></div>
-<div class="book-sub">A practical guide to turning AI tools into products, services and online business opportunities.</div>
-<div class="book-foot">BY JESSE ISA<br><br>LEARN · CREATE · LAUNCH · IMPROVE</div>
-</div>
-</div>
-</div>
-</section>
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> A practical guide for beginners</div>
+          <h1>Turn AI skills into <em>real opportunities.</em></h1>
+          <p class="lead">Discover practical ways to use artificial intelligence to create digital products, offer services, build an audience and launch an online business — with a clear plan to help you take your first steps.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#get-access">Buy Now – ₦10,000 <span aria-hidden="true">→</span></a>
+            <a class="btn secondary" href="#inside">Explore what's inside</a>
+          </div>
+          <p class="micro">Beginner-friendly • Practical examples • Prompts, worksheets and a 30-day action plan</p>
+        </div>
+        <div class="book-stage" aria-label="AI Income Blueprint digital book cover illustration">
+          <div class="book">
+            <div class="book-kicker">THE PRACTICAL EDITION · 2026</div>
+            <div class="book-title">AI<br><span>INCOME</span><br>BLUEPRINT</div>
+            <div class="book-rule"></div>
+            <div class="book-sub">A practical guide to turning AI tools into products, services and online business opportunities.</div>
+            <div class="book-foot">BY JESSE ISA<br><br>LEARN · CREATE · LAUNCH · IMPROVE</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="strip">
-<div class="wrap strip-grid">
-<div class="strip-item"><strong>18 Chapters</strong>Clear, guided lessons</div>
-<div class="strip-item"><strong>7 Income Models</strong>Choose one practical route</div>
-<div class="strip-item"><strong>Practical Workbook</strong>Prompts, templates and worksheets</div>
-<div class="strip-item"><strong>30-Day Action Plan</strong>Move from idea to testing</div>
-</div>
-</div>
+    <div class="strip">
+      <div class="wrap strip-grid">
+        <div class="strip-item"><strong>18 Chapters</strong>Clear, guided lessons</div>
+        <div class="strip-item"><strong>7 Income Models</strong>Choose one practical route</div>
+        <div class="strip-item"><strong>Practical Workbook</strong>Prompts, templates and worksheets</div>
+        <div class="strip-item"><strong>30-Day Action Plan</strong>Move from idea to testing</div>
+      </div>
+    </div>
 
-<section>
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">The opportunity</div>
-<h2>AI is a tool. Your ability to solve problems is the business.</h2>
-<p>You don't need to master every AI platform. Start by learning how to use a few tools to create something useful for a clearly defined audience.</p>
-</div>
-<div class="cards">
-<article class="card"><div class="num">01 / CREATE</div><h3>Build digital products</h3><p>Plan practical ebooks, templates, workbooks and downloadable resources around real customer needs.</p></article>
-<article class="card"><div class="num">02 / DELIVER</div><h3>Offer useful services</h3><p>Use AI to support writing, design, research, content and admin services while you remain responsible for quality.</p></article>
-<article class="card"><div class="num">03 / GROW</div><h3>Build an audience</h3><p>Create helpful content, explore affiliate marketing and develop a repeatable way to reach potential customers.</p></article>
-</div>
-</div>
-</section>
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">The opportunity</div>
+          <h2>AI is a tool. Your ability to solve problems is the business.</h2>
+          <p>You don't need to master every AI platform. Start by learning how to use a few tools to create something useful for a clearly defined audience.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="num">01 / CREATE</div><h3>Build digital products</h3><p>Plan practical ebooks, templates, workbooks and downloadable resources around real customer needs.</p></article>
+          <article class="card"><div class="num">02 / DELIVER</div><h3>Offer useful services</h3><p>Use AI to support writing, design, research, content and admin services while you remain responsible for quality.</p></article>
+          <article class="card"><div class="num">03 / GROW</div><h3>Build an audience</h3><p>Create helpful content, explore affiliate marketing and develop a repeatable way to reach potential customers.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section id="inside">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Inside the blueprint</div>
-<h2>A practical roadmap, not a collection of vague AI tips.</h2>
-<p>Each chapter is designed to help you understand an opportunity and decide what to do next.</p>
-</div>
-<div class="chapter-list">
-<div class="chapter"><b>01</b><span>Understand the AI Income Opportunity</span></div>
-<div class="chapter"><b>02</b><span>Choose a Problem People Will Pay to Solve</span></div>
-<div class="chapter"><b>03</b><span>Set Up a Simple AI Toolkit</span></div>
-<div class="chapter"><b>04</b><span>Seven Practical AI-Assisted Income Models</span></div>
-<div class="chapter"><b>05</b><span>Create a Digital Product People Can Use</span></div>
-<div class="chapter"><b>06</b><span>Sell an AI-Assisted Service</span></div>
-<div class="chapter"><b>07</b><span>Use Content to Attract the Right Audience</span></div>
-<div class="chapter"><b>08</b><span>Affiliate Marketing with Trust</span></div>
-<div class="chapter"><b>09</b><span>Build a Simple Sales System</span></div>
-<div class="chapter"><b>10</b><span>Prompting That Produces Useful Work</span></div>
-<div class="chapter"><b>11</b><span>Quality, Trust and Responsible AI</span></div>
-<div class="chapter"><b>12</b><span>Price Your Offer and Understand the Numbers</span></div>
-<div class="chapter"><b>13</b><span>Find Your First Customers</span></div>
-<div class="chapter"><b>14</b><span>Create Repeatable Workflows</span></div>
-<div class="chapter"><b>15</b><span>Your 30-Day Implementation Plan</span></div>
-<div class="chapter"><b>16</b><span>Practical Workbook: Build Your First Offer</span></div>
-<div class="chapter"><b>17</b><span>Ready-to-Use Business Templates</span></div>
-<div class="chapter"><b>18</b><span>Your Next Steps and Learning Plan</span></div>
-</div>
-</div>
-</section>
+    <section id="inside">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Inside the blueprint</div>
+          <h2>A practical roadmap, not a collection of vague AI tips.</h2>
+          <p>Each chapter is designed to help you understand an opportunity and decide what to do next.</p>
+        </div>
+        <div class="chapter-list">
+          <div class="chapter"><b>01</b><span>Understand the AI Income Opportunity</span></div>
+          <div class="chapter"><b>02</b><span>Choose a Problem People Will Pay to Solve</span></div>
+          <div class="chapter"><b>03</b><span>Set Up a Simple AI Toolkit</span></div>
+          <div class="chapter"><b>04</b><span>Seven Practical AI-Assisted Income Models</span></div>
+          <div class="chapter"><b>05</b><span>Create a Digital Product People Can Use</span></div>
+          <div class="chapter"><b>06</b><span>Sell an AI-Assisted Service</span></div>
+          <div class="chapter"><b>07</b><span>Use Content to Attract the Right Audience</span></div>
+          <div class="chapter"><b>08</b><span>Affiliate Marketing with Trust</span></div>
+          <div class="chapter"><b>09</b><span>Build a Simple Sales System</span></div>
+          <div class="chapter"><b>10</b><span>Prompting That Produces Useful Work</span></div>
+          <div class="chapter"><b>11</b><span>Quality, Trust and Responsible AI</span></div>
+          <div class="chapter"><b>12</b><span>Price Your Offer and Understand the Numbers</span></div>
+          <div class="chapter"><b>13</b><span>Find Your First Customers</span></div>
+          <div class="chapter"><b>14</b><span>Create Repeatable Workflows</span></div>
+          <div class="chapter"><b>15</b><span>Your 30-Day Implementation Plan</span></div>
+          <div class="chapter"><b>16</b><span>Practical Workbook: Build Your First Offer</span></div>
+          <div class="chapter"><b>17</b><span>Ready-to-Use Business Templates</span></div>
+          <div class="chapter"><b>18</b><span>Your Next Steps and Learning Plan</span></div>
+        </div>
+      </div>
+    </section>
 
-<section id="practical-method">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">The practical method</div>
-<h2>Finish with something you can actually put into action.</h2>
-<p>The book takes you through a simple process. You are not expected to launch seven businesses at once. You will focus on one useful offer and test it with real people.</p>
-</div>
-<div class="steps">
-<div class="step"><strong>01</strong><h3>Find a problem</h3><p>Identify a specific audience, speak to potential customers and check whether the problem matters.</p></div>
-<div class="step"><strong>02</strong><h3>Create an offer</h3><p>Choose a product or service, define exactly what the customer receives and prepare a sample.</p></div>
-<div class="step"><strong>03</strong><h3>Present and sell</h3><p>Prepare your message, price and delivery process, then reach out to suitable prospects.</p></div>
-<div class="step"><strong>04</strong><h3>Review and improve</h3><p>Use feedback, enquiries and costs to decide what to improve next.</p></div>
-</div>
-<div class="panel" style="margin-top:18px;">
-<h2 style="font-size:1.5rem;">Practical tools included</h2>
-<p>Customer interview questions • opportunity scorecard • pricing worksheet • customer brief • outreach messages • weekly sales tracker • delivery checklist.</p>
-</div>
-</div>
-</section>
+    <section id="practical-method">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">The practical method</div>
+          <h2>Finish with something you can actually put into action.</h2>
+          <p>The book takes you through a simple process. You are not expected to launch seven businesses at once. You will focus on one useful offer and test it with real people.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><strong>01</strong><h3>Find a problem</h3><p>Identify a specific audience, speak to potential customers and check whether the problem matters.</p></div>
+          <div class="step"><strong>02</strong><h3>Create an offer</h3><p>Choose a product or service, define exactly what the customer receives and prepare a sample.</p></div>
+          <div class="step"><strong>03</strong><h3>Present and sell</h3><p>Prepare your message, price and delivery process, then reach out to suitable prospects.</p></div>
+          <div class="step"><strong>04</strong><h3>Review and improve</h3><p>Use feedback, enquiries and costs to decide what to improve next.</p></div>
+        </div>
+        <div class="panel" style="margin-top:18px;">
+          <h2 style="font-size:1.5rem;">Practical tools included</h2>
+          <p>Customer interview questions • opportunity scorecard • pricing worksheet • customer brief • outreach messages • weekly sales tracker • delivery checklist.</p>
+        </div>
+      </div>
+    </section>
 
-<section>
-<div class="wrap split">
-<div class="panel">
-<div class="eyebrow">Make it practical</div>
-<h2>Don't just read about AI. Put it to work.</h2>
-<p>The Blueprint includes practical tools to help you move from an idea to a tested offer.</p>
-<ul class="checklist">
-<li><span class="check">✓</span><span>Copy-and-adapt AI prompts for real business tasks</span></li>
-<li><span class="check">✓</span><span>Customer research and offer-building worksheets</span></li>
-<li><span class="check">✓</span><span>Digital product and service creation workflows</span></li>
-<li><span class="check">✓</span><span>Pricing, outreach and sales message templates</span></li>
-<li><span class="check">✓</span><span>Customer validation and delivery checklists</span></li>
-<li><span class="check">✓</span><span>A 30-day plan with weekly review questions</span></li>
-</ul>
-</div>
-<div>
-<div class="eyebrow">Who it's for</div>
-<h2 style="font-size:2.3rem;line-height:1.1;letter-spacing:-.04em;margin:13px 0;">Start from where you are.</h2>
-<p class="muted">This guide is designed for people who want a structured, realistic introduction to AI-assisted business opportunities.</p>
-<div class="audience" style="margin-top:22px;">
-<div class="card"><h3>Beginners</h3><p>Understand the options and choose one practical starting point.</p></div>
-<div class="card"><h3>Creators</h3><p>Develop products and content with a clearer workflow.</p></div>
-<div class="card"><h3>Freelancers</h3><p>Package a service and use AI to support delivery.</p></div>
-<div class="card"><h3>Small business owners</h3><p>Explore useful ways to improve everyday business tasks.</p></div>
-</div>
-</div>
-</div>
-</section>
+    <section>
+      <div class="wrap split">
+        <div class="panel">
+          <div class="eyebrow">Make it practical</div>
+          <h2>Don't just read about AI. Put it to work.</h2>
+          <p>The Blueprint includes practical tools to help you move from an idea to a tested offer.</p>
+          <ul class="checklist">
+            <li><span class="check">✓</span><span>Copy-and-adapt AI prompts for real business tasks</span></li>
+            <li><span class="check">✓</span><span>Customer research and offer-building worksheets</span></li>
+            <li><span class="check">✓</span><span>Digital product and service creation workflows</span></li>
+            <li><span class="check">✓</span><span>Pricing, outreach and sales message templates</span></li>
+            <li><span class="check">✓</span><span>Customer validation and delivery checklists</span></li>
+            <li><span class="check">✓</span><span>A 30-day plan with weekly review questions</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="eyebrow">Who it's for</div>
+          <h2 style="font-size:2.3rem;line-height:1.1;letter-spacing:-.04em;margin:13px 0;">Start from where you are.</h2>
+          <p class="muted">This guide is designed for people who want a structured, realistic introduction to AI-assisted business opportunities.</p>
+          <div class="audience" style="margin-top:22px;">
+            <div class="card"><h3>Beginners</h3><p>Understand the options and choose one practical starting point.</p></div>
+            <div class="card"><h3>Creators</h3><p>Develop products and content with a clearer workflow.</p></div>
+            <div class="card"><h3>Freelancers</h3><p>Package a service and use AI to support delivery.</p></div>
+            <div class="card"><h3>Small business owners</h3><p>Explore useful ways to improve everyday business tasks.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="how-it-works">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Your next steps</div>
-<h2>Learn it. Choose a direction. Take action.</h2>
-<p>Use the 30-day plan to choose one offer, build a sample, speak to potential customers and review what you learn.</p>
-</div>
-<div class="steps">
-<div class="step"><strong>01</strong><h3>Learn</h3><p>Understand the tools, opportunities and basic business models.</p></div>
-<div class="step"><strong>02</strong><h3>Choose</h3><p>Select one customer problem and one offer to focus on.</p></div>
-<div class="step"><strong>03</strong><h3>Build</h3><p>Create a useful product or service and prepare to deliver it.</p></div>
-<div class="step"><strong>04</strong><h3>Improve</h3><p>Talk to customers, review feedback and refine your approach.</p></div>
-</div>
-</div>
-</section>
+    <section id="how-it-works">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Your next steps</div>
+          <h2>Learn it. Choose a direction. Take action.</h2>
+          <p>Use the 30-day plan to choose one offer, build a sample, speak to potential customers and review what you learn.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><strong>01</strong><h3>Learn</h3><p>Understand the tools, opportunities and basic business models.</p></div>
+          <div class="step"><strong>02</strong><h3>Choose</h3><p>Select one customer problem and one offer to focus on.</p></div>
+          <div class="step"><strong>03</strong><h3>Build</h3><p>Create a useful product or service and prepare to deliver it.</p></div>
+          <div class="step"><strong>04</strong><h3>Improve</h3><p>Talk to customers, review feedback and refine your approach.</p></div>
+        </div>
+      </div>
+    </section>
 
-<section id="get-access">
-<div class="wrap">
-<div class="cta-band">
-<div class="eyebrow">Your starting point</div>
-<h2>Make your next move with a clearer blueprint.</h2>
-<p>Get the practical edition by Jesse Isa. Learn how to identify a customer problem, create a useful offer, prepare to sell it and improve it using real feedback.</p>
-<a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦10,000 <span aria-hidden="true">→</span></a>
-<p class="fineprint">Digital PDF workbook. No guaranteed earnings or business results. Outcomes depend on your skills, offer quality, execution, customer demand and other factors.</p>
-</div>
-</div>
-</section>
+    <section id="get-access">
+      <div class="wrap">
+        <div class="cta-band">
+          <div class="eyebrow">Your starting point</div>
+          <h2>Make your next move with a clearer blueprint.</h2>
+          <p>Get the practical edition by Jesse Isa. Learn how to identify a customer problem, create a useful offer, prepare to sell it and improve it using real feedback.</p>
+          <a class="btn" href="https://selar.com/765ny53i0f" id="checkout-button">Buy Now – ₦10,000 <span aria-hidden="true">→</span></a>
+          <p class="fineprint">Digital PDF workbook. No guaranteed earnings or business results. Outcomes depend on your skills, offer quality, execution, customer demand and other factors.</p>
+        </div>
+      </div>
+    </section>
 
-<section id="faq">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Questions</div>
-<h2>Frequently asked questions</h2>
-</div>
-<div class="faq">
-<details><summary>Is this guide suitable for beginners?</summary><p>Yes. It introduces the main concepts and gives you a structured way to choose an opportunity, create an offer and take practical first steps. You do not need to be an AI expert.</p></details>
-<details><summary>Do I need expensive AI tools?</summary><p>No. You can begin learning with free or low-cost tools. Features and usage limits change, so check current provider terms before relying on a particular tool.</p></details>
-<details><summary>Will this book guarantee that I make money?</summary><p>No. The Blueprint is educational and does not guarantee income, sales or business success. Outcomes depend on your offer, execution, customer demand and other factors.</p></details>
-<details><summary>What will I learn?</summary><p>You will work through 18 chapters covering seven AI-assisted income models, customer research, digital products, services, content, affiliate marketing, pricing, sales, responsible AI, automation, practical worksheets and a 30-day implementation plan.</p></details>
-<details><summary>How do I receive the product?</summary><p>The PDF should be delivered through the checkout platform after successful payment. The seller must configure the product delivery settings with the correct AI Income Blueprint PDF before accepting orders.</p></details>
-</div>
-</div>
-</section>
-</main>
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Questions</div>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq">
+          <details><summary>Is this guide suitable for beginners?</summary><p>Yes. It introduces the main concepts and gives you a structured way to choose an opportunity, create an offer and take practical first steps. You do not need to be an AI expert.</p></details>
+          <details><summary>Do I need expensive AI tools?</summary><p>No. You can begin learning with free or low-cost tools. Features and usage limits change, so check current provider terms before relying on a particular tool.</p></details>
+          <details><summary>Will this book guarantee that I make money?</summary><p>No. The Blueprint is educational and does not guarantee income, sales or business success. Outcomes depend on your offer, execution, customer demand and other factors.</p></details>
+          <details><summary>What will I learn?</summary><p>You will work through 18 chapters covering seven AI-assisted income models, customer research, digital products, services, content, affiliate marketing, pricing, sales, responsible AI, automation, practical worksheets and a 30-day implementation plan.</p></details>
+          <details><summary>How do I receive the product?</summary><p>The PDF should be delivered through the checkout platform after successful payment. The seller must configure the product delivery settings with the correct AI Income Blueprint PDF before accepting orders.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<div class="mobile-cta">
-<a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦10,000</a>
-</div>
+  <div class="mobile-cta">
+    <a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦10,000</a>
+  </div>
 
-<footer>
-<div class="wrap footer-inner">
-<div><strong>AI INCOME BLUEPRINT</strong><br>Created by Jesse Isa<br>Learn. Create. Launch. Improve.</div>
-<div>© 2026 AI Income Blueprint. All rights reserved.</div>
-</div>
-</footer>
+  <footer>
+    <div class="wrap footer-inner">
+      <div><strong>AI INCOME BLUEPRINT</strong><br>Created by Jesse Isa<br>Learn. Create. Launch. Improve.</div>
+      <div>© 2026 AI Income Blueprint. All rights reserved.</div>
+    </div>
+  </footer>
 
+  <script>
+    // All purchase buttons link directly to the AI Income Blueprint Selar checkout.
+    const CHECKOUT_URL = "https://selar.com/765ny53i0f";
+
+    document.querySelectorAll('.btn').forEach(link => {
+      if (link.textContent.includes('Buy Now')) {
+        link.href = CHECKOUT_URL;
+
+        link.addEventListener('click', function () {
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', 'InitiateCheckout', {
+              content_name: 'AI Income Blueprint',
+              content_category: 'Digital product',
+              currency: 'NGN',
+              value: 10000
+            });
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
