@@ -221,8 +221,8 @@
         <a href="#how-it-works">How it works</a>
         <a href="#faq">FAQs</a>
       </nav>
-      <p class="price-line"><strong>₦10,000</strong> <span>One-time payment</span></p>
-      <a class="btn" href="#get-access">Buy Now – ₦10,000</a>
+      <p class="price-line"><strong>₦5,500</strong> <span>One-time payment</span></p>
+      <a class="btn" href="#get-access">Buy Now – ₦5,500</a>
     </div>
   </header>
 
@@ -234,11 +234,12 @@
           <h1>Turn AI skills into <em>real opportunities.</em></h1>
           <p class="lead">Discover practical ways to use artificial intelligence to create digital products, offer services, build an audience and launch an online business — with a clear plan to help you take your first steps.</p>
           <div class="hero-actions">
-            <a class="btn" href="#get-access">Buy Now – ₦10,000 <span aria-hidden="true">→</span></a>
+            <a class="btn" href="#get-access">Buy Now – ₦5,500 <span aria-hidden="true">→</span></a>
             <a class="btn secondary" href="#inside">Explore what's inside</a>
           </div>
           <p class="micro">Beginner-friendly • Practical examples • Prompts, worksheets and a 30-day action plan</p>
         </div>
+
         <div class="book-stage" aria-label="AI Income Blueprint digital book cover illustration">
           <div class="book">
             <div class="book-kicker">THE PRACTICAL EDITION · 2026</div>
@@ -267,10 +268,23 @@
           <h2>AI is a tool. Your ability to solve problems is the business.</h2>
           <p>You don't need to master every AI platform. Start by learning how to use a few tools to create something useful for a clearly defined audience.</p>
         </div>
+
         <div class="cards">
-          <article class="card"><div class="num">01 / CREATE</div><h3>Build digital products</h3><p>Plan practical ebooks, templates, workbooks and downloadable resources around real customer needs.</p></article>
-          <article class="card"><div class="num">02 / DELIVER</div><h3>Offer useful services</h3><p>Use AI to support writing, design, research, content and admin services while you remain responsible for quality.</p></article>
-          <article class="card"><div class="num">03 / GROW</div><h3>Build an audience</h3><p>Create helpful content, explore affiliate marketing and develop a repeatable way to reach potential customers.</p></article>
+          <article class="card">
+            <div class="num">01 / CREATE</div>
+            <h3>Build digital products</h3>
+            <p>Plan practical ebooks, templates, workbooks and downloadable resources around real customer needs.</p>
+          </article>
+          <article class="card">
+            <div class="num">02 / DELIVER</div>
+            <h3>Offer useful services</h3>
+            <p>Use AI to support writing, design, research, content and admin services while you remain responsible for quality.</p>
+          </article>
+          <article class="card">
+            <div class="num">03 / GROW</div>
+            <h3>Build an audience</h3>
+            <p>Create helpful content, explore affiliate marketing and develop a repeatable way to reach potential customers.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -282,6 +296,7 @@
           <h2>A practical roadmap, not a collection of vague AI tips.</h2>
           <p>Each chapter is designed to help you understand an opportunity and decide what to do next.</p>
         </div>
+
         <div class="chapter-list">
           <div class="chapter"><b>01</b><span>Understand the AI Income Opportunity</span></div>
           <div class="chapter"><b>02</b><span>Choose a Problem People Will Pay to Solve</span></div>
@@ -312,12 +327,14 @@
           <h2>Finish with something you can actually put into action.</h2>
           <p>The book takes you through a simple process. You are not expected to launch seven businesses at once. You will focus on one useful offer and test it with real people.</p>
         </div>
+
         <div class="steps">
           <div class="step"><strong>01</strong><h3>Find a problem</h3><p>Identify a specific audience, speak to potential customers and check whether the problem matters.</p></div>
           <div class="step"><strong>02</strong><h3>Create an offer</h3><p>Choose a product or service, define exactly what the customer receives and prepare a sample.</p></div>
           <div class="step"><strong>03</strong><h3>Present and sell</h3><p>Prepare your message, price and delivery process, then reach out to suitable prospects.</p></div>
           <div class="step"><strong>04</strong><h3>Review and improve</h3><p>Use feedback, enquiries and costs to decide what to improve next.</p></div>
         </div>
+
         <div class="panel" style="margin-top:18px;">
           <h2 style="font-size:1.5rem;">Practical tools included</h2>
           <p>Customer interview questions • opportunity scorecard • pricing worksheet • customer brief • outreach messages • weekly sales tracker • delivery checklist.</p>
@@ -331,6 +348,7 @@
           <div class="eyebrow">Make it practical</div>
           <h2>Don't just read about AI. Put it to work.</h2>
           <p>The Blueprint includes practical tools to help you move from an idea to a tested offer.</p>
+
           <ul class="checklist">
             <li><span class="check">✓</span><span>Copy-and-adapt AI prompts for real business tasks</span></li>
             <li><span class="check">✓</span><span>Customer research and offer-building worksheets</span></li>
@@ -340,10 +358,12 @@
             <li><span class="check">✓</span><span>A 30-day plan with weekly review questions</span></li>
           </ul>
         </div>
+
         <div>
           <div class="eyebrow">Who it's for</div>
           <h2 style="font-size:2.3rem;line-height:1.1;letter-spacing:-.04em;margin:13px 0;">Start from where you are.</h2>
           <p class="muted">This guide is designed for people who want a structured, realistic introduction to AI-assisted business opportunities.</p>
+
           <div class="audience" style="margin-top:22px;">
             <div class="card"><h3>Beginners</h3><p>Understand the options and choose one practical starting point.</p></div>
             <div class="card"><h3>Creators</h3><p>Develop products and content with a clearer workflow.</p></div>
@@ -361,6 +381,7 @@
           <h2>Learn it. Choose a direction. Take action.</h2>
           <p>Use the 30-day plan to choose one offer, build a sample, speak to potential customers and review what you learn.</p>
         </div>
+
         <div class="steps">
           <div class="step"><strong>01</strong><h3>Learn</h3><p>Understand the tools, opportunities and basic business models.</p></div>
           <div class="step"><strong>02</strong><h3>Choose</h3><p>Select one customer problem and one offer to focus on.</p></div>
@@ -376,7 +397,7 @@
           <div class="eyebrow">Your starting point</div>
           <h2>Make your next move with a clearer blueprint.</h2>
           <p>Get the practical edition by Jesse Isa. Learn how to identify a customer problem, create a useful offer, prepare to sell it and improve it using real feedback.</p>
-          <a class="btn" href="https://selar.com/765ny53i0f" id="checkout-button">Buy Now – ₦10,000 <span aria-hidden="true">→</span></a>
+          <a class="btn" href="https://selar.com/765ny53i0f" id="checkout-button">Buy Now – ₦5,500 <span aria-hidden="true">→</span></a>
           <p class="fineprint">Digital PDF workbook. No guaranteed earnings or business results. Outcomes depend on your skills, offer quality, execution, customer demand and other factors.</p>
         </div>
       </div>
@@ -388,6 +409,7 @@
           <div class="eyebrow">Questions</div>
           <h2>Frequently asked questions</h2>
         </div>
+
         <div class="faq">
           <details><summary>Is this guide suitable for beginners?</summary><p>Yes. It introduces the main concepts and gives you a structured way to choose an opportunity, create an offer and take practical first steps. You do not need to be an AI expert.</p></details>
           <details><summary>Do I need expensive AI tools?</summary><p>No. You can begin learning with free or low-cost tools. Features and usage limits change, so check current provider terms before relying on a particular tool.</p></details>
@@ -400,7 +422,7 @@
   </main>
 
   <div class="mobile-cta">
-    <a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦10,000</a>
+    <a class="btn" href="https://selar.com/765ny53i0f">Buy Now – ₦5,500</a>
   </div>
 
   <footer>
@@ -424,7 +446,7 @@
               content_name: 'AI Income Blueprint',
               content_category: 'Digital product',
               currency: 'NGN',
-              value: 10000
+              value: 5500
             });
           }
         });
